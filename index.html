@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b0f14" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Daily Goals" />
+  <link rel="icon" href="data:image/png;base64,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" />
+  <link rel="apple-touch-icon" href="data:image/png;base64,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" />
+  <link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjogIkRhaWx5IEdvYWxzIiwgInNob3J0X25hbWUiOiAiRGFpbHkgR29hbHMiLCAic3RhcnRfdXJsIjogIi4iLCAiZGlzcGxheSI6ICJzdGFuZGFsb25lIiwgImJhY2tncm91bmRfY29sb3IiOiAiIzBiMGYxNCIsICJ0aGVtZV9jb2xvciI6ICIjMGIwZjE0IiwgImljb25zIjogW3sic3JjIjogImRhdGE6aW1hZ2UvcG5nO2Jhc2U2NCxpVkJPUncwS0dnb0FBQUFOU1VoRVVnQUFBTFFBQUFDMENBWUFBQUE5elFZeUFBQUhEa2xFUVZSNG5PM2R3WTdVUmhDSDhTTGlCaEpDY0lqMlJoU0pKOGs3NVJIeVRua1NKSlRjVmx3UUYrN2tzaVpleS9aMGU3cTZxLy8xZlNjTzdPQVovNmJjOW82WkY2L2V2UDloUkNMOU1ub0RpRm9HYUpJSzBDUVZvRWtxUUpOVWdDYXBBRTFTQVpxa0FqUkpCV2lTQ3RBa0ZhQkpLa0NUVklBbXFRQk5VZ0dhcEFJMFNmVnk5QWEwNk4zRHg5R2JJTlBYeDArak4rR3VYc3gyQ3haNCt6Y1Q4aWxBZ3poTzBYR0hCbDBLK2Z1M1IrY3R5ZFBydHc5RmZ5OHE3SkNnYjBFR2NMOXVBWThHT3hUb004Z2dIdDhaN2lpd3c0RGV3d3ppdU8zaGpvQTZ4SFZvTU0vWDN2NkpjUEkrZEVJRFdhTkkwM3JZaEFhelRwR205WkFKdlgyeVFOWnBPNjE3VCtydUV4ck0ybTMzWis5SjNSVTBtSE0wRW5VMzBHRE8xU2pVUTA0S3daeWpFZnU1QytqMXV4UE11VnJ2N3g1VDJoMTBoSXZ0RkNkdkQ2NmdXVGVUV2QvMWRMYzFOSmh6MTJ2L3U0Rm1xVUZuZWZub01xR1p6bVRXeDRFTGFLNXEwRkhlVnoxQ2ZIeVVxRlhOUWJOMnBwcGFlM0dkMEN3M2FDOVBGeXc1U0txbW9GbHUwSlZhdW5HYjBDdzM2Q3d2SHhML3QxMmtmdnY3eitxZitlZVB2eHkySkdlQXZxTXJlRXNmQitUWEFuUmxyUkRYL0R2Z0xxL1pUYkxLdngzc2hiZ2tOZHpybTJwYjNGRExoRDRwRXVTbFpadlVZTGNLMER0RmhMd04yUHNCZWxVTHlKOGZ2M3lvL1puZkgzNzk5K3EvQit6bnNZWis2aXJtSzRCdmRSWDRqS2hicjZFQmJmV1lQUkFmVll0N050U0FibGdONUo2SWo2ckJQUXZzMXFEVGZqaXBGUFBueHk4ZkltQTJxOXVXR1U1c1BVb0p1Z2F6ODZaY0N0VEhwUU5kc3BNalRlV2pTcmN4RytwVW9Fc3hkOWlVWm9INmVXbEEzOXFwTTB6bG8wcTJQUXZxRktCTE1IZmFGTmRBblFCMEZzeEwyVkZMZzg2R2VTa3phbW5RWjZsaVhsSi9ma2ZKZ2o2YlFsbDI5dG56VkozU2txREIvSC9aVU11QlZ0eEpucW05WG5LZ3o4bzJuWmN5UFc4cDBDdzFqc3V5OUpBQ1RTUURtdWw4dXd4VFdnYjBVY3FZcjl5cXBmeDZtSW1BVnBrdU5TMlk3N25CZHB2QzZ5Z0IraWpWYWJSRlhJdGE5WFV4RXdldDJCSGVscE42NXFZSHJYQ1lMTzBXMmhhb1ozODlwd2Q5bFBKaDlheFMxS3F2anl4b3RiSkRMVzFxMExNZkhrdnJqWG5tMTNWcTBFY3BUU2xQekVxdjA1SWthSlZZWnRRSDZLQnhHZTVhZ0E1WURXYW04L09tQlgxMDRqTDdEdTZOK2VneFpqMHhuQlowOW1aLzQzb0Y2RUJ4RW5oL2dBNFNtTnNFNkFDQnVWMkFIaHlZMndib2s3eXZCWE90dVgyQVBzampqcEM5eHkrSjZWd2VvSGU2OTQ2UTJzYy9DOHgxQVhxVDl4MGhZUFlOMEt0NjNCRlNHcGl2QmVpblNySGVnNW9yR3Y0Qitxa2FSRmRRZzdsUDA0SSsrcWJVZXlhb0YrckltSSsyYlpadm90MDJMV2l2V3FPT2pGa3hRTy9VQ2pXL09Pa2ZvQSs2RnpXWDU4WWtDYnJWWkx5S2VoYk1pa2VRcVVIM09ISHh2UG9SZFRMUGVrSm9Oam5vWG5tZ2pvcDU5bVJCdHo2Y3RnUVlBYlBpY3NOTUFIVFB3NlBuVGFsUm1ubTVZU1lBdW5mM2dJeU9XU0ZwMEY2SDFkbGhxaTQzekVSQWp6aE0xcUtlNFUwdyszTERUQVQwV1o3VHFCUnBKTXpLMDlsTUNQVFpkQm1KZWhiTUN0UFpUQWoweUk3UVJzS2NwUmV2M3J6LzBlS0IzajE4L1Bubjc5OGVXenprcGZnQ3p2MmlUdWZYYng5Ky92bnI0NmU3SHkvVmhGWmZQeDZWNlhuTGdWWlpDL1pLN2ZXU0EyMDI3Z1F4WWxHWEdsNUpnallEdFZrK3pHYkNvRytsamxyOStSMGxEZnJXRkZMZDZiZWVsK3AwTmhNSGJaWVBkV2JNWmdsQW0rVkJuUjJ6V1JMUVptV29aNFZkc3UwWk1Kc2xBbTFXdGxOblExMnl2Vmt3bXlVRGJWYU9PanJzMG0zTWhOa3NJV2l6OHAwY0ZYWHBkbVhEYkpZVXRGa2Q2aWl3YTdZbEkyWXp3VS9iWGFuMlcxTjdmbXF2OXMwMEcrVFduN1lEOUZOWHZ3cllBL2ZWSThKc21NMEE3VnFMNzdlK0FyekZrbVpHekdhQTd0Sk1YOXcrSytTbDFxQmYzdjBJZ2kxSUlzT2VIYkpYZ0Q0cEltd2duOWRzeVdHbXRldzRhZ1J1VmNTdGx4dG1UT2pxMXJnOGNhc2k5ZzdRZDdTSDdncHk4TFlMMEkwRDU5amNmdlc5WGg4UmJmUHkwUlIwcTRVOTVhcWxtN1FmVGlMTlhFR3o3S0M5UEYwMEI4MnlnMnBxN1lVbEIwbmxBbnI5cm1QWlFlczhmanU0cnN1RUJqV1o5WEhnQnBxMU5KM2w1YVBiR3BvcG5idGUrOThWOVBaZENPcWNiZmU3NTlIYmZVS3o5S0IxM2g2NkxEbTQ2cEUzNzZzYTI0WmNod1oxamticzUyNmdXVS9ucXVlNmVWM1hDUTNxSEkzQ2JEWmd5UUZxN1VaaU5tdDhrMnhONnh0cWwxUnZyTTNRM21BYWNZVnIySWVUOXA0czAzck9vbUEyR3ppaDF6R3Q1eXdTNUtVUUh4OWxXczlYUk14bVFTYjAwdDZrWG1KaWorOXN5RVRBYkJZTTlOSVpiRE53OSt6V2tUSUs1S1dRb0pkdXdWNENlTHRLbDNyUklDK0ZCcjFVQ3B2OGl3cDVhUXJRNjhEZHYraUkxMDBIZWkrUXQyc212SHRKZ0NaYUNuRWRtcWhWZ0NhcEFFMVNBWnFrQWpSSkJXaVNDdEFrRmFCSktrQ1RWSUFtcVFCTlVnR2FwQUkwU1FWb2tnclFKQldnU2FyL0FFMWJnY2NnZ0hWakFBQUFBRWxGVGtTdVFtQ0MiLCAic2l6ZXMiOiAiMTgweDE4MCIsICJ0eXBlIjogImltYWdlL3BuZyJ9XX0=" />
+  <title>Daily Goals — Calm Streak Tracker</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      color-scheme: dark;
+    }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #0b0f14;
+      color: #e2e8f0;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .card-surface {
+      background-color: #121821;
+      border: 1px solid #1e293b;
+    }
+    .card-surface-hover:hover {
+      border-color: #2c3b52;
+    }
+    .day-tile {
+      transition: transform 0.12s ease, background-color 0.15s ease, border-color 0.15s ease;
+    }
+    .day-tile:active {
+      transform: scale(0.94);
+    }
+    .expand-panel {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.22s ease;
+    }
+    .expand-panel.open {
+      grid-template-rows: 1fr;
+    }
+    .expand-inner {
+      overflow: hidden;
+    }
+    input[type="time"]::-webkit-calendar-picker-indicator {
+      filter: invert(0.8);
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body class="min-h-screen antialiased selection:bg-emerald-500/20 selection:text-emerald-200">
+  <div class="max-w-2xl mx-auto px-4 pt-[max(1.5rem,env(safe-area-inset-top))] sm:pt-10 pb-24">
+    <!-- Header -->
+    <header class="flex flex-wrap items-center justify-between gap-3 mb-6">
+      <div>
+        <div class="flex items-center gap-2.5">
+          <h1 class="text-xl sm:text-2xl font-semibold tracking-tight text-slate-100">Daily Goals</h1>
+          <span id="todayProgressBadge" class="hidden text-xs font-medium px-2.5 py-0.5 rounded-full bg-slate-800/90 text-slate-300 border border-slate-700/70"></span>
+        </div>
+        <p id="todayDateLabel" class="text-sm text-slate-400 mt-0.5"></p>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <button id="notifToggleBtn" type="button" title="Toggle browser reminders"
+          class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-medium bg-slate-900/90 hover:bg-slate-800 text-slate-300 border border-slate-800 transition-colors">
+          <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+          </svg>
+          <span id="notifBtnLabel" class="hidden sm:inline">Reminders</span>
+        </button>
+
+        <button id="backupBtn" type="button" title="Export or import backup"
+          class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-medium bg-slate-900/90 hover:bg-slate-800 text-slate-300 border border-slate-800 transition-colors">
+          <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+          </svg>
+          <span class="hidden sm:inline">Backup</span>
+        </button>
+
+        <button id="addGoalBtn" type="button"
+          class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-medium bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-300 border border-emerald-500/30 transition-colors">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+          </svg>
+          <span>Add Goal</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Active Reminder Banner (shown when any unlogged goal has passed its reminder time today) -->
+    <div id="dueBanner" class="hidden mb-4 px-4 py-3 rounded-2xl bg-amber-500/10 border border-amber-500/25 flex items-center justify-between gap-3">
+      <div class="flex items-center gap-2.5 text-sm text-amber-200/95">
+        <svg class="w-4 h-4 text-amber-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <span id="dueBannerText"></span>
+      </div>
+      <button id="dismissBannerBtn" type="button" class="text-xs text-amber-300/70 hover:text-amber-200 px-2 py-1 rounded-lg">Dismiss</button>
+    </div>
+
+    <!-- Goals List -->
+    <main id="goalsList" class="space-y-3"></main>
+
+    <!-- Empty State -->
+    <section id="emptyState" class="hidden card-surface rounded-2xl p-8 sm:p-10 text-center mt-4">
+      <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mx-auto mb-4">
+        <svg class="w-6 h-6 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      </div>
+      <h2 class="text-lg font-medium text-slate-100">No goals tracked yet</h2>
+      <p class="text-sm text-slate-400 max-w-sm mx-auto mt-1.5 leading-relaxed">
+        Add your daily habits to track streaks, set gentle reminder times, and check in with a single tap.
+      </p>
+      <button id="emptyAddBtn" type="button"
+        class="mt-5 inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-500/30 transition-colors">
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+        </svg>
+        Add your first goal
+      </button>
+    </section>
+  </div>
+
+  <!-- Add / Edit Goal Modal -->
+  <div id="goalModal" class="hidden fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 bg-black/70 backdrop-blur-sm">
+    <div class="w-full sm:max-w-md card-surface rounded-t-2xl sm:rounded-2xl p-5 sm:p-6 shadow-2xl">
+      <div class="flex items-center justify-between mb-4">
+        <h3 id="goalModalTitle" class="text-base font-semibold text-slate-100">Add Goal</h3>
+        <button id="closeGoalModalBtn" type="button" class="p-1.5 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <form id="goalForm" class="space-y-4">
+        <input type="hidden" id="goalIdInput" />
+
+        <div>
+          <label for="goalNameInput" class="block text-xs font-medium text-slate-300 mb-1.5">Goal name</label>
+          <input id="goalNameInput" type="text" required maxlength="60" placeholder="e.g., No late-night snacks"
+            class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700/80 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-emerald-500/60" />
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800/90 space-y-3">
+          <div class="flex items-center justify-between">
+            <div>
+              <span class="text-sm font-medium text-slate-200">Daily reminder</span>
+              <p class="text-xs text-slate-400">Highlight &amp; notify when it's time to check in</p>
+            </div>
+            <label class="relative inline-flex items-center cursor-pointer">
+              <input id="reminderEnabledInput" type="checkbox" class="sr-only peer" />
+              <div class="w-10 h-6 bg-slate-700 rounded-full peer peer-checked:bg-emerald-500/70 after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:translate-x-4"></div>
+            </label>
+          </div>
+
+          <div id="reminderTimeRow" class="hidden flex items-center justify-between pt-2 border-t border-slate-800">
+            <label for="reminderTimeInput" class="text-xs text-slate-300">Reminder time</label>
+            <input id="reminderTimeInput" type="time" value="21:30"
+              class="px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-sm text-slate-100 focus:outline-none focus:border-emerald-500/60" />
+          </div>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800/90 flex items-center justify-between gap-3">
+          <div>
+            <span class="text-sm font-medium text-slate-200">Evening habit cutoff</span>
+            <p class="text-xs text-slate-400">Check-ins before noon count toward yesterday</p>
+          </div>
+          <label class="relative inline-flex items-center cursor-pointer shrink-0">
+            <input id="eveningCutoffInput" type="checkbox" class="sr-only peer" />
+            <div class="w-10 h-6 bg-slate-700 rounded-full peer peer-checked:bg-emerald-500/70 after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:translate-x-4"></div>
+          </label>
+        </div>
+
+        <div class="flex items-center justify-end gap-2.5 pt-2">
+          <button id="cancelGoalModalBtn" type="button"
+            class="px-4 py-2 rounded-xl text-sm font-medium text-slate-300 hover:bg-slate-800 transition-colors">
+            Cancel
+          </button>
+          <button type="submit"
+            class="px-4 py-2 rounded-xl text-sm font-medium bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-500/30 transition-colors">
+            Save Goal
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Backup Modal -->
+  <div id="backupModal" class="hidden fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 bg-black/70 backdrop-blur-sm">
+    <div class="w-full sm:max-w-md card-surface rounded-t-2xl sm:rounded-2xl p-5 sm:p-6 shadow-2xl">
+      <div class="flex items-center justify-between mb-3">
+        <h3 class="text-base font-semibold text-slate-100">Backup &amp; Restore</h3>
+        <button id="closeBackupModalBtn" type="button" class="p-1.5 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <p class="text-xs text-slate-400 mb-4 leading-relaxed">
+        Your goals and streaks are saved locally in this browser. Export a JSON file anytime to back up or move your data.
+      </p>
+      <div class="space-y-2.5">
+        <button id="exportJsonBtn" type="button"
+          class="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium bg-slate-800 hover:bg-slate-700 text-slate-100 border border-slate-700 transition-colors">
+          <svg class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+          </svg>
+          Export JSON Backup
+        </button>
+
+        <label class="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700/80 cursor-pointer transition-colors">
+          <svg class="w-4 h-4 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
+          </svg>
+          Import JSON Backup
+          <input id="importJsonInput" type="file" accept="application/json,.json" class="hidden" />
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Delete Confirmation Modal -->
+  <div id="deleteModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
+    <div class="w-full max-w-sm card-surface rounded-2xl p-5 shadow-2xl">
+      <h3 class="text-base font-semibold text-slate-100">Delete goal?</h3>
+      <p id="deleteModalText" class="text-sm text-slate-400 mt-1.5"></p>
+      <div class="flex items-center justify-end gap-2.5 mt-5">
+        <button id="cancelDeleteBtn" type="button"
+          class="px-3.5 py-2 rounded-xl text-sm font-medium text-slate-300 hover:bg-slate-800 transition-colors">
+          Cancel
+        </button>
+        <button id="confirmDeleteBtn" type="button"
+          class="px-3.5 py-2 rounded-xl text-sm font-medium bg-rose-500/20 hover:bg-rose-500/30 text-rose-300 border border-rose-500/30 transition-colors">
+          Delete
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="hidden fixed bottom-5 left-1/2 -translate-x-1/2 z-50 px-4 py-2.5 rounded-xl bg-slate-800 text-slate-100 text-xs font-medium border border-slate-700 shadow-xl"></div>
+
+  <script>
+    (function () {
+      const STORAGE_KEY = 'calm_daily_goals_v1';
+      const NOTIF_LOG_KEY = 'calm_daily_goals_notif_log_v1';
+
+      let state = {
+        goals: [],
+        expandedId: null,
+        notificationsEnabled: false,
+        dismissedDueDate: null
+      };
+
+      let pendingDeleteId = null;
+      let toastTimer = null;
+
+      // ---------- Date Helpers ----------
+      function toDateKey(date) {
+        const y = date.getFullYear();
+        const m = String(date.getMonth() + 1).padStart(2, '0');
+        const d = String(date.getDate()).padStart(2, '0');
+        return `${y}-${m}-${d}`;
+      }
+
+      function addDays(date, delta) {
+        const copy = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+        copy.setDate(copy.getDate() + delta);
+        return copy;
+      }
+
+      function getActiveDate(goal) {
+        const now = new Date();
+        if (goal && goal.eveningCutoff && now.getHours() < 12) {
+          return addDays(now, -1);
+        }
+        return new Date(now.getFullYear(), now.getMonth(), now.getDate());
+      }
+
+      function getActiveDateKey(goal) {
+        return toDateKey(getActiveDate(goal));
+      }
+
+      function formatDisplayDate(date) {
+        return date.toLocaleDateString(undefined, {
+          weekday: 'long',
+          month: 'short',
+          day: 'numeric'
+        });
+      }
+
+      function formatShortDate(dateKey) {
+        const [y, m, d] = dateKey.split('-').map(Number);
+        const dt = new Date(y, m - 1, d);
+        return dt.toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
+      }
+
+      function formatTime12h(hhmm) {
+        if (!hhmm) return '';
+        const [hStr, mStr] = hhmm.split(':');
+        let h = parseInt(hStr, 10);
+        const ampm = h >= 12 ? 'PM' : 'AM';
+        h = h % 12 || 12;
+        return `${h}:${mStr} ${ampm}`;
+      }
+
+      // ---------- Storage ----------
+      function loadState() {
+        try {
+          const raw = localStorage.getItem(STORAGE_KEY);
+          if (raw) {
+            const parsed = JSON.parse(raw);
+            if (Array.isArray(parsed.goals)) {
+              state.goals = parsed.goals;
+            }
+            if (parsed.expandedId) state.expandedId = parsed.expandedId;
+            if (typeof parsed.notificationsEnabled === 'boolean') {
+              state.notificationsEnabled = parsed.notificationsEnabled;
+            }
+            if (parsed.dismissedDueDate) {
+              state.dismissedDueDate = parsed.dismissedDueDate;
+            }
+          }
+        } catch (err) {
+          console.warn('Could not read localStorage:', err);
+        }
+      }
+
+      function saveState() {
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+        } catch (err) {
+          console.warn('Could not write localStorage:', err);
+        }
+      }
+
+      function loadNotifLog() {
+        try {
+          return JSON.parse(localStorage.getItem(NOTIF_LOG_KEY) || '{}');
+        } catch {
+          return {};
+        }
+      }
+
+      function saveNotifLog(log) {
+        try {
+          localStorage.setItem(NOTIF_LOG_KEY, JSON.stringify(log));
+        } catch {}
+      }
+
+      // ---------- Streak Calculations ----------
+      function computeStats(goal) {
+        const logs = goal.logs || {};
+        const activeDate = getActiveDate(goal);
+        const activeKey = toDateKey(activeDate);
+
+        // Current streak: count backwards from activeDate if done, or from yesterday if activeDate is still unlogged
+        let currentStreak = 0;
+        let cursor = activeDate;
+        if (logs[activeKey] === 'done') {
+          while (logs[toDateKey(cursor)] === 'done') {
+            currentStreak++;
+            cursor = addDays(cursor, -1);
+          }
+        } else if (!logs[activeKey]) {
+          cursor = addDays(activeDate, -1);
+          while (logs[toDateKey(cursor)] === 'done') {
+            currentStreak++;
+            cursor = addDays(cursor, -1);
+          }
+        }
+
+        // Best streak & total done across all logged dates
+        const doneDates = Object.keys(logs).filter((k) => logs[k] === 'done').sort();
+        const totalDone = doneDates.length;
+        let bestStreak = 0;
+        let run = 0;
+        let prevDate = null;
+
+        for (const key of doneDates) {
+          const [y, m, d] = key.split('-').map(Number);
+          const dt = new Date(y, m - 1, d);
+          if (prevDate) {
+            const diffDays = Math.round((dt - prevDate) / (1000 * 60 * 60 * 24));
+            run = diffDays === 1 ? run + 1 : 1;
+          } else {
+            run = 1;
+          }
+          if (run > bestStreak) bestStreak = run;
+          prevDate = dt;
+        }
+
+        return { currentStreak, bestStreak, totalDone };
+      }
+
+      // ---------- Reminders ----------
+      function isGoalDueNow(goal) {
+        if (!goal.reminderEnabled || !goal.reminderTime) return false;
+        const activeKey = getActiveDateKey(goal);
+        if (goal.logs && goal.logs[activeKey]) return false;
+
+        const now = new Date();
+        // If eveningCutoff is active and it's before noon, the active day is yesterday, so it's already past yesterday's reminder
+        if (goal.eveningCutoff && now.getHours() < 12) return true;
+
+        const [rh, rm] = goal.reminderTime.split(':').map(Number);
+        const nowMins = now.getHours() * 60 + now.getMinutes();
+        const remMins = rh * 60 + rm;
+        return nowMins >= remMins;
+      }
+
+      function checkAndFireNotifications() {
+        if (!state.notificationsEnabled) return;
+        if (typeof Notification === 'undefined' || Notification.permission !== 'granted') return;
+
+        const todayKey = toDateKey(new Date());
+        const log = loadNotifLog();
+        let changed = false;
+
+        for (const goal of state.goals) {
+          if (!goal.reminderEnabled || !goal.reminderTime) continue;
+          const activeKey = getActiveDateKey(goal);
+          if (goal.logs && goal.logs[activeKey]) continue;
+
+          const stampKey = `${goal.id}_${todayKey}`;
+          if (log[stampKey]) continue;
+
+          if (isGoalDueNow(goal)) {
+            try {
+              new Notification('Daily Goal Reminder', {
+                body: `Time to check in on "${goal.name}"`,
+                silent: false
+              });
+              log[stampKey] = true;
+              changed = true;
+            } catch {}
+          }
+        }
+        if (changed) saveNotifLog(log);
+      }
+
+      // ---------- UI Helpers ----------
+      function showToast(msg) {
+        const el = document.getElementById('toast');
+        el.textContent = msg;
+        el.classList.remove('hidden');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => {
+          el.classList.add('hidden');
+        }, 2600);
+      }
+
+      function escapeHtml(str) {
+        return String(str)
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#39;');
+      }
+
+      // ---------- Rendering ----------
+      function renderHeader() {
+        const now = new Date();
+        document.getElementById('todayDateLabel').textContent = formatDisplayDate(now);
+
+        const badge = document.getElementById('todayProgressBadge');
+        if (state.goals.length > 0) {
+          const doneToday = state.goals.filter((g) => (g.logs || {})[getActiveDateKey(g)] === 'done').length;
+          badge.textContent = `${doneToday} / ${state.goals.length} done`;
+          badge.classList.remove('hidden');
+        } else {
+          badge.classList.add('hidden');
+        }
+
+        const notifBtn = document.getElementById('notifToggleBtn');
+        const notifLabel = document.getElementById('notifBtnLabel');
+        if (state.notificationsEnabled && typeof Notification !== 'undefined' && Notification.permission === 'granted') {
+          notifBtn.classList.add('border-emerald-500/40', 'text-emerald-300');
+          notifBtn.classList.remove('border-slate-800', 'text-slate-300');
+          notifLabel.textContent = 'Reminders On';
+        } else {
+          notifBtn.classList.remove('border-emerald-500/40', 'text-emerald-300');
+          notifBtn.classList.add('border-slate-800', 'text-slate-300');
+          notifLabel.textContent = 'Reminders';
+        }
+      }
+
+      function renderDueBanner() {
+        const banner = document.getElementById('dueBanner');
+        const text = document.getElementById('dueBannerText');
+        const todayKey = toDateKey(new Date());
+
+        if (state.dismissedDueDate === todayKey) {
+          banner.classList.add('hidden');
+          return;
+        }
+
+        const dueGoals = state.goals.filter(isGoalDueNow);
+        if (dueGoals.length === 0) {
+          banner.classList.add('hidden');
+          return;
+        }
+
+        if (dueGoals.length === 1) {
+          text.textContent = `Reminder: "${dueGoals[0].name}" is ready for today's check-in.`;
+        } else {
+          text.textContent = `Reminders: ${dueGoals.length} goals are ready for today's check-in.`;
+        }
+        banner.classList.remove('hidden');
+      }
+
+      function renderGoals() {
+        const listEl = document.getElementById('goalsList');
+        const emptyEl = document.getElementById('emptyState');
+
+        if (state.goals.length === 0) {
+          listEl.innerHTML = '';
+          emptyEl.classList.remove('hidden');
+          return;
+        }
+        emptyEl.classList.add('hidden');
+
+        listEl.innerHTML = state.goals.map((goal) => {
+          const stats = computeStats(goal);
+          const activeDate = getActiveDate(goal);
+          const activeKey = toDateKey(activeDate);
+          const todayStatus = (goal.logs || {})[activeKey] || null;
+          const isExpanded = state.expandedId === goal.id;
+          const dueNow = isGoalDueNow(goal);
+
+          // 7-day strip (6 days ago -> activeDate)
+          const strip7 = [];
+          for (let i = -6; i <= 0; i++) {
+            const d = addDays(activeDate, i);
+            const k = toDateKey(d);
+            const st = (goal.logs || {})[k] || null;
+            let cls = 'bg-slate-800/80 border-slate-700/60';
+            if (st === 'done') cls = 'bg-emerald-500/80 border-emerald-400/60';
+            else if (st === 'missed') cls = 'bg-rose-500/70 border-rose-400/50';
+            const ring = i === 0 ? 'ring-1 ring-slate-400/60 ring-offset-1 ring-offset-[#121821]' : '';
+            strip7.push(`<span title="${formatShortDate(k)}: ${st || 'unlogged'}" class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-[4px] border ${cls} ${ring}"></span>`);
+          }
+
+          // 28-day grid (27 days ago -> activeDate)
+          const grid28 = [];
+          for (let i = -27; i <= 0; i++) {
+            const d = addDays(activeDate, i);
+            const k = toDateKey(d);
+            const st = (goal.logs || {})[k] || null;
+            const dayNum = d.getDate();
+            let tileCls = 'bg-slate-900/90 border-slate-800 text-slate-500 hover:border-slate-600';
+            if (st === 'done') {
+              tileCls = 'bg-emerald-500/20 border-emerald-500/45 text-emerald-300 hover:bg-emerald-500/30';
+            } else if (st === 'missed') {
+              tileCls = 'bg-rose-500/15 border-rose-500/40 text-rose-300 hover:bg-rose-500/25';
+            }
+            const todayRing = i === 0 ? 'ring-1 ring-slate-300/60' : '';
+            grid28.push(`
+              <button type="button" data-action="cycle-day" data-id="${escapeHtml(goal.id)}" data-date="${k}"
+                title="${formatShortDate(k)} — tap to toggle"
+                class="day-tile h-9 sm:h-10 rounded-xl border text-xs font-medium flex flex-col items-center justify-center ${tileCls} ${todayRing}">
+                <span>${dayNum}</span>
+              </button>
+            `);
+          }
+
+          const doneBtnActive = todayStatus === 'done'
+            ? 'bg-emerald-500/25 border-emerald-400/60 text-emerald-200'
+            : 'bg-slate-900/90 border-slate-800 text-slate-400 hover:text-emerald-300 hover:border-emerald-500/40';
+
+          const missedBtnActive = todayStatus === 'missed'
+            ? 'bg-rose-500/25 border-rose-400/60 text-rose-200'
+            : 'bg-slate-900/90 border-slate-800 text-slate-400 hover:text-rose-300 hover:border-rose-500/40';
+
+          const reminderBadge = goal.reminderEnabled && goal.reminderTime
+            ? `<span class="inline-flex items-center gap-1 text-[11px] px-2 py-0.5 rounded-md ${dueNow ? 'bg-amber-500/15 text-amber-300 border border-amber-500/30' : 'bg-slate-800/80 text-slate-400 border border-slate-700/60'}">
+                <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                ${dueNow ? 'Due · ' : ''}${formatTime12h(goal.reminderTime)}
+              </span>`
+            : '';
+
+          return `
+            <article class="card-surface card-surface-hover rounded-2xl transition-colors overflow-hidden">
+              <!-- Compact Row -->
+              <div class="p-3.5 sm:p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <button type="button" data-action="toggle-expand" data-id="${escapeHtml(goal.id)}"
+                  class="flex items-start sm:items-center gap-2.5 text-left flex-1 min-w-0 group">
+                  <svg class="w-4 h-4 mt-0.5 sm:mt-0 text-slate-500 group-hover:text-slate-300 shrink-0 transition-transform duration-200 ${isExpanded ? 'rotate-90 text-slate-300' : ''}"
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                  </svg>
+                  <div class="min-w-0 flex-1">
+                    <div class="flex flex-wrap items-center gap-2">
+                      <span class="text-sm sm:text-base font-medium text-slate-100 truncate">${escapeHtml(goal.name)}</span>
+                      <span class="inline-flex items-center gap-1 text-[11px] font-medium px-2 py-0.5 rounded-md ${stats.currentStreak > 0 ? 'bg-emerald-500/15 text-emerald-300 border border-emerald-500/25' : 'bg-slate-800/80 text-slate-400 border border-slate-700/60'}">
+                        ${stats.currentStreak}d streak
+                      </span>
+                      ${reminderBadge}
+                    </div>
+                  </div>
+                </button>
+
+                <div class="flex items-center justify-between sm:justify-end gap-3 pl-6 sm:pl-0">
+                  <!-- 7-day glance strip -->
+                  <div class="flex items-center gap-1" aria-label="Last 7 days">
+                    ${strip7.join('')}
+                  </div>
+
+                  <!-- Quick today check-in -->
+                  <div class="flex items-center gap-1.5 shrink-0">
+                    <button type="button" data-action="log-today" data-status="done" data-id="${escapeHtml(goal.id)}"
+                      class="px-2.5 py-1.5 rounded-xl border text-xs font-medium transition-colors ${doneBtnActive}">
+                      Done
+                    </button>
+                    <button type="button" data-action="log-today" data-status="missed" data-id="${escapeHtml(goal.id)}"
+                      class="px-2.5 py-1.5 rounded-xl border text-xs font-medium transition-colors ${missedBtnActive}">
+                      Missed
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Expandable Details -->
+              <div class="expand-panel ${isExpanded ? 'open' : ''}">
+                <div class="expand-inner">
+                  <div class="px-4 pb-4 pt-3 border-t border-slate-800/80 space-y-4">
+                    <!-- Stats -->
+                    <div class="grid grid-cols-3 gap-2.5">
+                      <div class="p-3 rounded-xl bg-slate-900/70 border border-slate-800/80">
+                        <div class="text-[11px] text-slate-400">Current streak</div>
+                        <div class="text-lg font-semibold text-emerald-300 mt-0.5">${stats.currentStreak} <span class="text-xs font-normal text-slate-400">days</span></div>
+                      </div>
+                      <div class="p-3 rounded-xl bg-slate-900/70 border border-slate-800/80">
+                        <div class="text-[11px] text-slate-400">Best streak</div>
+                        <div class="text-lg font-semibold text-slate-100 mt-0.5">${stats.bestStreak} <span class="text-xs font-normal text-slate-400">days</span></div>
+                      </div>
+                      <div class="p-3 rounded-xl bg-slate-900/70 border border-slate-800/80">
+                        <div class="text-[11px] text-slate-400">Total done</div>
+                        <div class="text-lg font-semibold text-slate-100 mt-0.5">${stats.totalDone} <span class="text-xs font-normal text-slate-400">days</span></div>
+                      </div>
+                    </div>
+
+                    <!-- 4-Week Grid -->
+                    <div>
+                      <div class="flex items-center justify-between mb-2">
+                        <span class="text-xs font-medium text-slate-300">Last 4 weeks</span>
+                        <span class="text-[11px] text-slate-500">Tap any day to cycle: Done · Missed · Clear</span>
+                      </div>
+                      <div class="grid grid-cols-7 gap-1.5">
+                        ${grid28.join('')}
+                      </div>
+                    </div>
+
+                    <!-- Goal Footer Actions -->
+                    <div class="flex items-center justify-between pt-1">
+                      <span class="text-[11px] text-slate-500">
+                        ${goal.eveningCutoff ? 'Before-noon check-ins count for yesterday' : 'Standard daily midnight reset'}
+                      </span>
+                      <div class="flex items-center gap-2">
+                        <button type="button" data-action="edit-goal" data-id="${escapeHtml(goal.id)}"
+                          class="px-3 py-1.5 rounded-lg text-xs font-medium text-slate-300 hover:text-slate-100 bg-slate-800/70 hover:bg-slate-800 border border-slate-700/70 transition-colors">
+                          Edit
+                        </button>
+                        <button type="button" data-action="delete-goal" data-id="${escapeHtml(goal.id)}"
+                          class="px-3 py-1.5 rounded-lg text-xs font-medium text-rose-300/85 hover:text-rose-200 bg-rose-500/10 hover:bg-rose-500/20 border border-rose-500/20 transition-colors">
+                          Delete
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          `;
+        }).join('');
+      }
+
+      function renderAll() {
+        renderHeader();
+        renderDueBanner();
+        renderGoals();
+      }
+
+      // ---------- Modal Controls ----------
+      const goalModal = document.getElementById('goalModal');
+      const goalForm = document.getElementById('goalForm');
+      const goalIdInput = document.getElementById('goalIdInput');
+      const goalNameInput = document.getElementById('goalNameInput');
+      const reminderEnabledInput = document.getElementById('reminderEnabledInput');
+      const reminderTimeRow = document.getElementById('reminderTimeRow');
+      const reminderTimeInput = document.getElementById('reminderTimeInput');
+      const eveningCutoffInput = document.getElementById('eveningCutoffInput');
+
+      function openGoalModal(goal = null) {
+        if (goal) {
+          document.getElementById('goalModalTitle').textContent = 'Edit Goal';
+          goalIdInput.value = goal.id;
+          goalNameInput.value = goal.name;
+          reminderEnabledInput.checked = !!goal.reminderEnabled;
+          reminderTimeInput.value = goal.reminderTime || '21:30';
+          eveningCutoffInput.checked = !!goal.eveningCutoff;
+        } else {
+          document.getElementById('goalModalTitle').textContent = 'Add Goal';
+          goalIdInput.value = '';
+          goalNameInput.value = '';
+          reminderEnabledInput.checked = false;
+          reminderTimeInput.value = '21:30';
+          eveningCutoffInput.checked = false;
+        }
+        reminderTimeRow.classList.toggle('hidden', !reminderEnabledInput.checked);
+        goalModal.classList.remove('hidden');
+        setTimeout(() => goalNameInput.focus(), 50);
+      }
+
+      function closeGoalModal() {
+        goalModal.classList.add('hidden');
+      }
+
+      reminderEnabledInput.addEventListener('change', () => {
+        reminderTimeRow.classList.toggle('hidden', !reminderEnabledInput.checked);
+      });
+
+      document.getElementById('addGoalBtn').addEventListener('click', () => openGoalModal());
+      document.getElementById('emptyAddBtn').addEventListener('click', () => openGoalModal());
+      document.getElementById('closeGoalModalBtn').addEventListener('click', closeGoalModal);
+      document.getElementById('cancelGoalModalBtn').addEventListener('click', closeGoalModal);
+
+      goalForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = goalNameInput.value.trim();
+        if (!name) return;
+
+        const id = goalIdInput.value;
+        const reminderEnabled = reminderEnabledInput.checked;
+        const reminderTime = reminderEnabled ? (reminderTimeInput.value || '21:30') : '';
+        const eveningCutoff = eveningCutoffInput.checked;
+
+        if (id) {
+          const target = state.goals.find((g) => g.id === id);
+          if (target) {
+            target.name = name;
+            target.reminderEnabled = reminderEnabled;
+            target.reminderTime = reminderTime;
+            target.eveningCutoff = eveningCutoff;
+          }
+          showToast('Goal updated');
+        } else {
+          const newGoal = {
+            id: 'g_' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6),
+            name,
+            reminderEnabled,
+            reminderTime,
+            eveningCutoff,
+            logs: {}
+          };
+          state.goals.push(newGoal);
+          state.expandedId = newGoal.id;
+          showToast('Goal added');
+        }
+
+        saveState();
+        closeGoalModal();
+        renderAll();
+        checkAndFireNotifications();
+      });
+
+      // ---------- List Event Delegation ----------
+      document.getElementById('goalsList').addEventListener('click', (e) => {
+        const btn = e.target.closest('[data-action]');
+        if (!btn) return;
+
+        const action = btn.dataset.action;
+        const id = btn.dataset.id;
+        const goal = state.goals.find((g) => g.id === id);
+        if (!goal) return;
+
+        if (action === 'toggle-expand') {
+          state.expandedId = state.expandedId === id ? null : id;
+          saveState();
+          renderGoals();
+        } else if (action === 'log-today') {
+          const status = btn.dataset.status;
+          const activeKey = getActiveDateKey(goal);
+          goal.logs = goal.logs || {};
+          if (goal.logs[activeKey] === status) {
+            delete goal.logs[activeKey];
+          } else {
+            goal.logs[activeKey] = status;
+          }
+          saveState();
+          renderAll();
+        } else if (action === 'cycle-day') {
+          const dateKey = btn.dataset.date;
+          goal.logs = goal.logs || {};
+          const cur = goal.logs[dateKey] || null;
+          if (!cur) goal.logs[dateKey] = 'done';
+          else if (cur === 'done') goal.logs[dateKey] = 'missed';
+          else delete goal.logs[dateKey];
+          saveState();
+          renderAll();
+        } else if (action === 'edit-goal') {
+          openGoalModal(goal);
+        } else if (action === 'delete-goal') {
+          pendingDeleteId = id;
+          document.getElementById('deleteModalText').textContent =
+            `Remove "${goal.name}" and its streak history? This cannot be undone.`;
+          document.getElementById('deleteModal').classList.remove('hidden');
+        }
+      });
+
+      // ---------- Delete Modal ----------
+      document.getElementById('cancelDeleteBtn').addEventListener('click', () => {
+        pendingDeleteId = null;
+        document.getElementById('deleteModal').classList.add('hidden');
+      });
+
+      document.getElementById('confirmDeleteBtn').addEventListener('click', () => {
+        if (pendingDeleteId) {
+          state.goals = state.goals.filter((g) => g.id !== pendingDeleteId);
+          if (state.expandedId === pendingDeleteId) state.expandedId = null;
+          saveState();
+          renderAll();
+          showToast('Goal deleted');
+        }
+        pendingDeleteId = null;
+        document.getElementById('deleteModal').classList.add('hidden');
+      });
+
+      // ---------- Notifications ----------
+      document.getElementById('notifToggleBtn').addEventListener('click', async () => {
+        if (typeof Notification === 'undefined') {
+          showToast('Browser notifications are not supported here');
+          return;
+        }
+        if (state.notificationsEnabled && Notification.permission === 'granted') {
+          state.notificationsEnabled = false;
+          saveState();
+          renderHeader();
+          showToast('Browser reminders paused');
+          return;
+        }
+        try {
+          const perm = await Notification.requestPermission();
+          if (perm === 'granted') {
+            state.notificationsEnabled = true;
+            saveState();
+            renderHeader();
+            showToast('Browser reminders enabled');
+            checkAndFireNotifications();
+          } else {
+            state.notificationsEnabled = false;
+            saveState();
+            renderHeader();
+            showToast('Notification permission was declined');
+          }
+        } catch {
+          showToast('Could not enable browser notifications here');
+        }
+      });
+
+      document.getElementById('dismissBannerBtn').addEventListener('click', () => {
+        state.dismissedDueDate = toDateKey(new Date());
+        saveState();
+        renderDueBanner();
+      });
+
+      // ---------- Backup (Export / Import) ----------
+      const backupModal = document.getElementById('backupModal');
+      document.getElementById('backupBtn').addEventListener('click', () => {
+        backupModal.classList.remove('hidden');
+      });
+      document.getElementById('closeBackupModalBtn').addEventListener('click', () => {
+        backupModal.classList.add('hidden');
+      });
+
+      document.getElementById('exportJsonBtn').addEventListener('click', () => {
+        const payload = {
+          version: 1,
+          exportedAt: new Date().toISOString(),
+          goals: state.goals
+        };
+        const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `daily-goals-backup-${toDateKey(new Date())}.json`;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        URL.revokeObjectURL(url);
+        backupModal.classList.add('hidden');
+        showToast('Backup downloaded');
+      });
+
+      document.getElementById('importJsonInput').addEventListener('change', (e) => {
+        const file = e.target.files && e.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = () => {
+          try {
+            const parsed = JSON.parse(String(reader.result));
+            const importedGoals = Array.isArray(parsed) ? parsed : parsed.goals;
+            if (!Array.isArray(importedGoals)) throw new Error('Invalid format');
+            state.goals = importedGoals.map((g) => ({
+              id: g.id || ('g_' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6)),
+              name: String(g.name || 'Untitled Goal'),
+              reminderEnabled: !!g.reminderEnabled,
+              reminderTime: g.reminderTime || '',
+              eveningCutoff: !!g.eveningCutoff,
+              logs: (g.logs && typeof g.logs === 'object') ? g.logs : {}
+            }));
+            state.expandedId = state.goals.length ? state.goals[0].id : null;
+            saveState();
+            renderAll();
+            backupModal.classList.add('hidden');
+            showToast(`Restored ${state.goals.length} goal(s)`);
+          } catch {
+            showToast('Invalid backup JSON file');
+          }
+          e.target.value = '';
+        };
+        reader.readAsText(file);
+      });
+
+      // ---------- Init & Periodic Reminder Check ----------
+      loadState();
+      renderAll();
+      checkAndFireNotifications();
+      setInterval(() => {
+        renderDueBanner();
+        renderGoals();
+        checkAndFireNotifications();
+      }, 60000);
+    })();
+  </script>
+</body>
+</html>
